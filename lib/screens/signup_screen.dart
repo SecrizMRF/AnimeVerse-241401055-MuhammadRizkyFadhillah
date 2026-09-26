@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import '../widgets/app_scaffold.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class SignInScreen extends StatelessWidget {
                       // TODO
                       // Signin Title
                       Text(
-                        'Welcome Back!',
+                        'Welcome 😹',
                         style: TextStyle(
                           fontSize: screenWidth * (isLargeScreen ? 0.06 : 0.1),
                           fontWeight: FontWeight.w800,
@@ -43,7 +43,7 @@ class SignInScreen extends StatelessWidget {
                       SizedBox(height: screenHeight * 0.01),
 
                       Text(
-                        'Sign in to continue your anime journey',
+                        'Regiter to start your anime journey',
                         style: TextStyle(
                           fontSize: screenWidth * 0.035,
                           fontWeight: FontWeight.w500,
@@ -123,28 +123,66 @@ class SignInScreen extends StatelessWidget {
                         obscureText: true,
                       ),
 
-                      SizedBox(height: screenHeight * 0.01),
+                      SizedBox(height: screenHeight * 0.02),
 
-                      // Forgot Password
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: TextButton(
-                          child: Text(
-                            'Forgot Password?',
-                            style: TextStyle(
-                              fontSize: screenWidth * 0.035,
-                              color: Colors.blue.shade300,
-                            ),
+                      // Password TextField
+                      TextField(
+                        decoration: InputDecoration(
+                          labelText: 'Confirm Password',
+                          labelStyle: TextStyle(
+                            fontSize: screenWidth * 0.04,
+                            color: Colors.white70,
                           ),
-                          onPressed: () {
-                            // TODO: Implement forgot password functionality
-                          },
+                          filled: true,
+                          fillColor: Colors.white.withValues(alpha: 0.1),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(screenWidth * 0.03),
+                            borderSide: BorderSide.none,
+                          ),
+                          prefixIcon: Icon(
+                            Icons.lock_outline,
+                            color: Colors.white70,
+                            size: screenWidth * 0.06,
+                          ),
+                          suffixIcon: Icon(
+                            Icons.visibility_off_outlined,
+                            color: Colors.white70,
+                            size: screenWidth * 0.06,
+                          ),
+                          contentPadding: EdgeInsets.symmetric(
+                            vertical: screenHeight * 0.025,
+                            horizontal: screenWidth * 0.055,
+                          ),
                         ),
+                        style: TextStyle(
+                          fontSize: screenWidth * 0.04,
+                          color: Colors.white,
+                        ),
+                        obscureText: true,
                       ),
 
+                      SizedBox(height: screenHeight * 0.01),
+
+                      // // Forgot Password
+                      // Align(
+                      //   alignment: Alignment.centerRight,
+                      //   child: TextButton(
+                      //     child: Text(
+                      //       'Forgot Password?',
+                      //       style: TextStyle(
+                      //         fontSize: screenWidth * 0.035,
+                      //         color: Colors.blue.shade300,
+                      //       ),
+                      //     ),
+                      //     onPressed: () {
+                      //       // TODO: Implement forgot password functionality
+                      //     },
+                      //   ),
+                      // ),
+                      //
                       SizedBox(height: screenHeight * 0.03),
 
-                      // Sign In Button
+                      // Sign Up Button
                       SizedBox(
                         width: double.infinity,
                         height: screenHeight * 0.075,
@@ -161,7 +199,7 @@ class SignInScreen extends StatelessWidget {
                             elevation: 5,
                           ),
                           child: Text(
-                            'Sign In',
+                            'Sign Up',
                             style: TextStyle(
                               fontSize: screenWidth * 0.045,
                               fontWeight: FontWeight.w600,
@@ -236,35 +274,6 @@ class SignInScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-
-                      // Sign up link
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Don't have an account? ",
-                            style: TextStyle(
-                              fontSize: screenWidth * 0.04,
-                              color: Colors.white70,
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              // TODO: Navigate to sign up screen
-                            },
-                            child: Text(
-                              'Sign Up',
-                              style: TextStyle(
-                                fontSize: screenWidth * 0.04,
-                                fontWeight: FontWeight.w600,
-                                color: Colors.blue.shade300,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-                      SizedBox(height: screenHeight * 0.05),
                     ],
                   ),
                 ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pm1_tugas1/screens/signin_screen.dart';
+import 'package:pm1_tugas1/screens/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Urbanist',
       ),
-      home: const SignIn(),
+      home: const SignUpScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

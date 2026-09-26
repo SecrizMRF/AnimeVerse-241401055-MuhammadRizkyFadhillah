@@ -39,5 +39,3 @@ fonts:
           weight: 800
         - assets: assets/fonts/Urbanist-ExtraBold.ttf
           weight: 900
-  # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/to/font-from-package
