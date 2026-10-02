@@ -13,6 +13,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   flutter_svg: ^2.3.0
+  go_router: ^18.0.2
 
 dev_dependencies:
   flutter_test:
@@ -22,20 +23,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-assets:
+  assets:
     - assets/images/
 
-fonts:
+  fonts:
     - family: Urbanist
       fonts:
-        - assets: assets/fonts/Urbanist-Regular.ttf
-        - assets: assets/fonts/Urbanist-Thin.ttf
+        - asset: assets/fonts/Urbanist-Regular.ttf
+        - asset: assets/fonts/Urbanist-Thin.ttf
           weight: 100
-        - assets: assets/fonts/Urbanist-Medium.ttf
+        - asset: assets/fonts/Urbanist-Medium.ttf
           weight: 300
-        - assets: assets/fonts/Urbanist-SemiBold.ttf
+        - asset: assets/fonts/Urbanist-SemiBold.ttf
           weight: 600
-        - assets: assets/fonts/Urbanist-Bold.ttf
+        - asset: assets/fonts/Urbanist-Bold.ttf
           weight: 800
-        - assets: assets/fonts/Urbanist-ExtraBold.ttf
+        - asset: assets/fonts/Urbanist-ExtraBold.ttf
           weight: 900
